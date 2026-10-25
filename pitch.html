@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentShield AI — Investor Pitch Deck (10 Slides)</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #060910;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .deck-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(10, 13, 20, 0.9);
+    }
+    .deck-container {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      max-width: 980px;
+      height: 600px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 40px 48px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), var(--accent-glow);
+      backdrop-filter: blur(16px);
+      flex-direction: column;
+      justify-content: space-between;
+      animation: fadeIn 0.3s ease;
+    }
+    .slide.active {
+      display: flex;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .slide-num {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .slide-title {
+      font-size: 2.2rem;
+      font-weight: 850;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .slide-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .deck-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(10, 13, 20, 0.9);
+    }
+    .metric-callout {
+      background: rgba(0, 242, 254, 0.05);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Deck Top Bar -->
+  <header class="deck-header">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <a href="index.html" style="text-decoration: none; font-size: 1.1rem; font-weight: 700; color: #fff;">
+        🛡️ AgentShield<span class="text-gradient">.AI</span>
+      </a>
+      <span class="badge badge-cyan">Investor Seed Presentation</span>
+    </div>
+    <div style="color: var(--text-muted); font-size: 0.85rem;">
+      Use <strong>← / →</strong> Arrow Keys to Navigate
+    </div>
+  </header>
+
+  <!-- Presentation Stage -->
+  <main class="deck-container">
+
+    <!-- Slide 1 -->
+    <div class="slide active" data-slide="1">
+      <div>
+        <div class="slide-num">Slide 01 • Introduction</div>
+        <h2 class="slide-title">Continuous Adversarial Security for AI Agents</h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem;">
+          The automated OWASP security fuzzer and compliance engine for generative AI applications.
+        </p>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3" style="margin-top: 24px;">
+          <div class="metric-callout">
+            <div style="font-size: 1.6rem; font-weight: 800; color: var(--accent-cyan);">&lt; 15 ms</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Fuzzer Latency</div>
+          </div>
+          <div class="metric-callout">
+            <div style="font-size: 1.6rem; font-weight: 800; color: var(--badge-success);">100%</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Non-Custodial Architecture</div>
+          </div>
+          <div class="metric-callout">
+            <div style="font-size: 1.6rem; font-weight: 800; color: #fff;">OWASP LLM</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">v2.0 Top 10 Aligned</div>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        Presented by Rajeshwari • Datheon AI Startup & SaaS Launch Lab
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" data-slide="2">
+      <div>
+        <div class="slide-num">Slide 02 • The Problem</div>
+        <h2 class="slide-title">AI Apps are Exposed to Semantic Exploits</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="glass-card" style="padding: 20px;">
+            <div style="font-size: 1.8rem;">🔓</div>
+            <h4 style="margin: 8px 0;">Prompt Extraction</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Proprietary system instructions and chain-of-thought logic stolen via simple DAN personas in under 60 seconds.</p>
+          </div>
+          <div class="glass-card" style="padding: 20px;">
+            <div style="font-size: 1.8rem;">💉</div>
+            <h4 style="margin: 8px 0;">Unsafe Tool Invocations</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Indirect injections trick agents into creating free coupon codes, altering SQL tables, or issuing refunds.</p>
+          </div>
+          <div class="glass-card" style="padding: 20px;">
+            <div style="font-size: 1.8rem;">📉</div>
+            <h4 style="margin: 8px 0;">Enterprise Bloat Gap</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Incumbents cost $25k–$80k/yr with lengthy sales cycles. 95% of software startups have zero automated security tools.</p>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        Market Insight: Over 78% of startups with AI features have unmitigated prompt exfiltration risks (OWASP 2025).
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" data-slide="3">
+      <div>
+        <div class="slide-num">Slide 03 • The Solution</div>
+        <h2 class="slide-title">AgentShield AI: Automated DevSecOps for LLMs</h2>
+      </div>
+      <div class="slide-body">
+        <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 1.05rem;">
+          A self-service, developer-first adversarial fuzzer and continuous regression scanner for prompts, RAG context, and autonomous agent tools.
+        </p>
+        <div class="grid-2">
+          <div class="metric-callout" style="text-align: left;">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 6px;">⚡ Pre-Deployment Fuzzing</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Audits system prompts during PRs and builds. Introduces zero runtime proxy latency to live user requests.</p>
+          </div>
+          <div class="metric-callout" style="text-align: left;">
+            <h4 style="color: var(--badge-success); margin-bottom: 6px;">🛠️ Copy-Paste Remediation</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Delivers the exact defensive guardrail wrapper and input validation regex needed to patch vulnerabilities.</p>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        Working MVP deployed with 100% passing test coverage.
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide" data-slide="4">
+      <div>
+        <div class="slide-num">Slide 04 • Market Opportunity</div>
+        <h2 class="slide-title">Market Sizing (Bottom-Up Methodology)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="metric-callout">
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Total Addressable Market</div>
+            <div style="font-size: 2rem; font-weight: 800; color: var(--accent-cyan); margin: 6px 0;">$6.2 Billion</div>
+            <p style="font-size: 0.75rem; color: var(--text-secondary);">Global AI Application Security & Red-Teaming Market by 2028 (34.2% CAGR)</p>
+          </div>
+          <div class="metric-callout">
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Serviceable Addressable</div>
+            <div style="font-size: 2rem; font-weight: 800; color: #fff; margin: 6px 0;">$196.5 Million</div>
+            <p style="font-size: 0.75rem; color: var(--text-secondary);">420,000 active B2B software companies deploying LLM APIs at $39/mo</p>
+          </div>
+          <div class="metric-callout">
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Serviceable Obtainable</div>
+            <div style="font-size: 2rem; font-weight: 800; color: var(--badge-success); margin: 6px 0;">$2.94M ARR</div>
+            <p style="font-size: 0.75rem; color: var(--text-secondary);">1.5% capture of early-stage AI startups (6,300 customers @ $39/mo)</p>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        Bottom-up sizing based on GitHub active AI repository and developer census data.
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide" data-slide="5">
+      <div>
+        <div class="slide-num">Slide 05 • Architecture & Moat</div>
+        <h2 class="slide-title">Defensibility & Competitive Moat</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="glass-card" style="padding: 20px;">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 8px;">1. Proprietary Attack Corpus</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Continuously updated library of multi-turn jailbreaks and indirect tool-abuse vectors tailored specifically to commercial agent architectures.</p>
+          </div>
+          <div class="glass-card" style="padding: 20px;">
+            <h4 style="color: var(--badge-success); margin-bottom: 8px;">2. Native CI/CD Integration</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Embedded directly in developer pull requests via GitHub Actions, creating sticky developer habits and high switching costs.</p>
+          </div>
+          <div class="glass-card" style="padding: 20px;">
+            <h4 style="color: #fff; margin-bottom: 8px;">3. Non-Custodial Trust</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Zero retention of client customer databases removes enterprise compliance friction and eliminates data liability.</p>
+          </div>
+          <div class="glass-card" style="padding: 20px;">
+            <h4 style="color: var(--badge-warning); margin-bottom: 8px;">4. 94%+ Gross Margins</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Deterministic local/server-side regex heuristics keep marginal scan compute costs under $0.0023/scan.</p>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        AgentShield AI defensibility framework.
+      </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide" data-slide="6">
+      <div>
+        <div class="slide-num">Slide 06 • Business Model</div>
+        <h2 class="slide-title">Product-Led Growth (PLG) Monetization</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="glass-card" style="padding: 20px; text-align: center;">
+            <span class="badge badge-green">Freemium Hook</span>
+            <h3 style="margin: 8px 0;">Community</h3>
+            <div style="font-size: 1.8rem; font-weight: 800;">$0</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">3 audits/mo • Standard OWASP rules • Frictionless developer acquisition</p>
+          </div>
+          <div class="glass-card" style="padding: 20px; text-align: center; border-color: var(--accent-cyan);">
+            <span class="badge badge-cyan">SaaS Core</span>
+            <h3 style="margin: 8px 0;">Pro Monthly</h3>
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-cyan);">$39 <span style="font-size: 0.8rem; color: var(--text-muted);">/ mo</span></div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">Unlimited scans • CI/CD webhooks • PDF compliance certificates</p>
+          </div>
+          <div class="glass-card" style="padding: 20px; text-align: center;">
+            <span class="badge" style="background: rgba(139, 92, 246, 0.2); color: #a78bfa;">Cashflow Booster</span>
+            <h3 style="margin: 8px 0;">Founder LTD</h3>
+            <div style="font-size: 1.8rem; font-weight: 800;">$149 <span style="font-size: 0.8rem; color: var(--text-muted);">one-time</span></div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">Limited to first 100 early supporters • Capped at 300 scans/mo fair-use</p>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        Stripe Test Mode billing integration with signature-verified webhooks operational.
+      </div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide" data-slide="7">
+      <div>
+        <div class="slide-num">Slide 07 • Go-To-Market</div>
+        <h2 class="slide-title">Developer Distribution Flywheel</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="metric-callout" style="text-align: left;">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 6px;">1. Product Hunt Launch</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Targeting #1 Product of the Day in Developer Tools with maker narrative, interactive fuzzer demo, and early-bird LTD offer.</p>
+          </div>
+          <div class="metric-callout" style="text-align: left;">
+            <h4 style="color: var(--badge-success); margin-bottom: 6px;">2. Free GitHub Action</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Any open-source or commercial repo can add `agentshield-audit.yml` in 3 lines of YAML, creating exponential organic dev adoption.</p>
+          </div>
+          <div class="metric-callout" style="text-align: left;">
+            <h4 style="color: #fff; margin-bottom: 6px;">3. Adversarial Teardowns</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Publishing objective benchmark reports dissecting public prompt injections on Hacker News, r/LocalLLaMA, and r/SaaS.</p>
+          </div>
+          <div class="metric-callout" style="text-align: left;">
+            <h4 style="color: var(--badge-warning); margin-bottom: 6px;">4. In-Page Viral Demo</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Interactive prompt fuzzer requires zero account creation, generating instant "aha!" moments before waitlist signup.</p>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        Low customer acquisition cost strategy driven by organic developer adoption.
+      </div>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide" data-slide="8">
+      <div>
+        <div class="slide-num">Slide 08 • Traction & Validation</div>
+        <h2 class="slide-title">Evidence & Customer Validation Status</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="metric-callout">
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--badge-success);">100%</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Problem Validation</div>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 6px;">5 of 5 customer discovery interviews confirmed prompt injection risks</p>
+          </div>
+          <div class="metric-callout">
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-cyan);">22 / 22</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Automated Tests Passing</div>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 6px;">Auth, scanning engine, Stripe test checkout, and webhook idempotency</p>
+          </div>
+          <div class="metric-callout">
+            <div style="font-size: 1.8rem; font-weight: 800; color: #fff;">80%</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Willingness to Pay</div>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 6px;">Confirmed commercial pricing acceptance for $39/mo and $149 LTD tiers</p>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        Verified in Phase 1 and Phase 2 discovery and testing phases.
+      </div>
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slide" data-slide="9">
+      <div>
+        <div class="slide-num">Slide 09 • Unit Economics</div>
+        <h2 class="slide-title">Predictable, High-Margin Unit Economics</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3" style="margin-bottom: 16px;">
+          <div class="metric-callout">
+            <div style="font-size: 0.8rem; color: var(--text-muted);">LTV / CAC RATIO</div>
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-cyan); margin: 4px 0;">19.5 : 1</div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary);">LTV: $558 • CAC: $28.50</div>
+          </div>
+          <div class="metric-callout">
+            <div style="font-size: 0.8rem; color: var(--text-muted);">GROSS MARGIN</div>
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--badge-success); margin: 4px 0;">94.8%</div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary);">&lt; $0.0023 compute cost per scan</div>
+          </div>
+          <div class="metric-callout">
+            <div style="font-size: 0.8rem; color: var(--text-muted);">BREAK-EVEN POINT</div>
+            <div style="font-size: 1.8rem; font-weight: 800; color: #fff; margin: 4px 0;">14 Pro Users</div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary);">$546 MRR covers infrastructure</div>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        Assumes 18-month average SaaS retention for active B2B software engineering teams.
+      </div>
+    </div>
+
+    <!-- Slide 10 -->
+    <div class="slide" data-slide="10">
+      <div>
+        <div class="slide-num">Slide 10 • Team & The Ask</div>
+        <h2 class="slide-title">Roadmap & Capital Allocation</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="glass-card" style="padding: 20px;">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 8px;">Execution Milestones</h4>
+            <ul style="font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 6px; padding-left: 18px;">
+              <li><strong>Q1 2026</strong>: Product Hunt Launch, onboard first 100 Lifetime Founders.</li>
+              <li><strong>Q2 2026</strong>: Launch official GitHub Actions & LangGraph red-teaming extension.</li>
+              <li><strong>Q3 2026</strong>: Self-hosted Team Enterprise tier with SOC2 audit exports.</li>
+            </ul>
+          </div>
+          <div class="glass-card" style="padding: 20px;">
+            <h4 style="color: var(--badge-success); margin-bottom: 8px;">The Ask: $250,000 Pre-Seed</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 8px;">
+              Accelerating engineering and developer acquisition:
+            </p>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">
+              • 60% Security Research & Engine Optimization<br>
+              • 25% Developer Advocacy & GTM Growth<br>
+              • 15% Infrastructure & Compliance Certifications
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        Contact: founder@agentshield.ai • Live Demo at agentshield.ai
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Deck Bottom Controls -->
+  <footer class="deck-controls">
+    <button id="prev-slide-btn" class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.85rem;">← Previous Slide</button>
+    <div style="font-weight: 600; font-size: 0.9rem;">
+      Slide <span id="current-slide-num">1</span> of 10
+    </div>
+    <button id="next-slide-btn" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem;">Next Slide →</button>
+  </footer>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 10;
+    const slides = document.querySelectorAll('.slide');
+    const currentNumDisplay = document.getElementById('current-slide-num');
+    const prevBtn = document.getElementById('prev-slide-btn');
+    const nextBtn = document.getElementById('next-slide-btn');
+
+    function showSlide(n) {
+      if (n < 1) n = 1;
+      if (n > totalSlides) n = totalSlides;
+      currentSlide = n;
+
+      slides.forEach(s => s.classList.remove('active'));
+      const activeSlide = document.querySelector(`.slide[data-slide="${currentSlide}"]`);
+      if (activeSlide) activeSlide.classList.add('active');
+
+      if (currentNumDisplay) currentNumDisplay.textContent = currentSlide;
+      if (prevBtn) prevBtn.disabled = currentSlide === 1;
+      if (nextBtn) nextBtn.disabled = currentSlide === totalSlides;
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        showSlide(currentSlide + 1);
+      } else if (e.key === 'ArrowLeft') {
+        showSlide(currentSlide - 1);
+      }
+    });
+
+    showSlide(1);
+  </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+    <linearGradient id="cyanGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C" />
+      <stop offset="100%" stop-color="#F97316" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadowBox" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.05" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="560" fill="url(#bgGrad2)" />
+
+  <!-- Outer Card Frame -->
+  <rect x="30" y="24" width="1140" height="512" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadowBox)" />
+
+  <!-- Title Header -->
+  <g transform="translate(60, 50)">
+    <rect width="140" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+    <text x="14" y="17" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" letter-spacing="0.5">TECHNICAL SYSTEM</text>
+    <text x="0" y="55" font-family="'Inter', -apple-system, sans-serif" font-size="26" font-weight="800" fill="#0F172A">
+      AgentShield AI — Architectural Data Flow &amp; Security Pipeline
+    </text>
+    <text x="0" y="78" font-family="'Inter', -apple-system, sans-serif" font-size="14" fill="#64748B">
+      Non-custodial, build-time adversarial red-teaming and remediation synthesis for production LLM systems.
+    </text>
+  </g>
+
+  <!-- Column 1: Input Sources -->
+  <g transform="translate(60, 160)">
+    <rect width="230" height="340" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
+    <path d="M 0 14 Q 0 0 14 0 L 216 0 Q 230 0 230 14 L 230 40 L 0 40 Z" fill="#F1F5F9" />
+    <text x="16" y="26" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="750" fill="#1E293B">1. DEVELOPER INPUT</text>
+
+    <!-- Sub-card 1 -->
+    <g transform="translate(16, 56)">
+      <rect width="198" height="76" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="24" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0F172A">System Prompts</text>
+      <text x="12" y="44" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#64748B">Executive instructions &amp;</text>
+      <text x="12" y="60" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#64748B">persona roleplay rules</text>
+    </g>
+
+    <!-- Sub-card 2 -->
+    <g transform="translate(16, 146)">
+      <rect width="198" height="76" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="24" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0F172A">RAG Vector Context</text>
+      <text x="12" y="44" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#64748B">Retrieved documents &amp;</text>
+      <text x="12" y="60" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#64748B">untrusted web chunks</text>
+    </g>
+
+    <!-- Sub-card 3 -->
+    <g transform="translate(16, 236)">
+      <rect width="198" height="84" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="24" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Agent Tool Schemas</text>
+      <text x="12" y="44" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#64748B">Function call parameters,</text>
+      <text x="12" y="60" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#64748B">Stripe actions &amp; SQL gates</text>
+    </g>
+  </g>
+
+  <!-- Flow Connector 1 -> 2 -->
+  <path d="M 290 330 L 340 330" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4 4" />
+  <polygon points="340,326 348,330 340,334" fill="#64748B" />
+
+  <!-- Column 2: Fuzzing Engine -->
+  <g transform="translate(350, 160)">
+    <rect width="460" height="340" rx="14" fill="#FFFFFF" stroke="#0284C7" stroke-width="2" filter="url(#shadowBox)" />
+    <path d="M 0 14 Q 0 0 14 0 L 446 0 Q 460 0 460 14 L 460 40 L 0 40 Z" fill="#F0F9FF" />
+    <text x="16" y="26" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="750" fill="#0369A1">2. ADVERSARIAL FUZZING ENGINE (OWASP TOP 10)</text>
+
+    <!-- Rule Grid -->
+    <g transform="translate(16, 56)">
+      <!-- Rule A -->
+      <g transform="translate(0, 0)">
+        <rect width="206" height="120" rx="8" fill="#FEF2F2" stroke="#FECACA" stroke-width="1" />
+        <text x="12" y="24" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="750" fill="#991B1B">LLM01: Prompt Injection</text>
+        <text x="12" y="44" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#450A0A">• DAN Persona Hijack</text>
+        <text x="12" y="62" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#450A0A">• Base64 Payload Evasion</text>
+        <text x="12" y="80" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#450A0A">• Disregard Instruction Probe</text>
+        <rect x="12" y="94" width="80" height="18" rx="4" fill="#DC2626" />
+        <text x="18" y="106" font-family="'Inter', -apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">CRITICAL 9.3</text>
+      </g>
+
+      <!-- Rule B -->
+      <g transform="translate(222, 0)">
+        <rect width="206" height="120" rx="8" fill="#FEFCE8" stroke="#FEF08A" stroke-width="1" />
+        <text x="12" y="24" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="750" fill="#854D0E">LLM02: Info Disclosure</text>
+        <text x="12" y="44" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#713F12">• Verbatim Prompt Dumps</text>
+        <text x="12" y="62" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#713F12">• API Key &amp; Token Leaks</text>
+        <text x="12" y="80" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#713F12">• Internal Variable Theft</text>
+        <rect x="12" y="94" width="60" height="18" rx="4" fill="#CA8A04" />
+        <text x="18" y="106" font-family="'Inter', -apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">HIGH 7.8</text>
+      </g>
+
+      <!-- Rule C -->
+      <g transform="translate(0, 136)">
+        <rect width="206" height="130" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+        <text x="12" y="24" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="750" fill="#1E40AF">LLM06: Excessive Agency</text>
+        <text x="12" y="44" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#1E3A8A">• Coupon Overrides (100%)</text>
+        <text x="12" y="62" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#1E3A8A">• Destructive SQL Injections</text>
+        <text x="12" y="80" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#1E3A8A">• Unauthorized Tool Execution</text>
+        <rect x="12" y="98" width="80" height="18" rx="4" fill="#2563EB" />
+        <text x="18" y="110" font-family="'Inter', -apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">CRITICAL 9.5</text>
+      </g>
+
+      <!-- Rule D -->
+      <g transform="translate(222, 136)">
+        <rect width="206" height="130" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1" />
+        <text x="12" y="24" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="750" fill="#166534">LLM08: Context Poisoning</text>
+        <text x="12" y="44" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#14532D">• Markdown Image Exfiltration</text>
+        <text x="12" y="62" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#14532D">• Indirect Instruction Leaks</text>
+        <text x="12" y="80" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#14532D">• Unbounded Expansion Loops</text>
+        <rect x="12" y="98" width="70" height="18" rx="4" fill="#16A34A" />
+        <text x="18" y="110" font-family="'Inter', -apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">MEDIUM 6.5</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Flow Connector 2 -> 3 -->
+  <path d="M 810 330 L 860 330" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4 4" />
+  <polygon points="860,326 868,330 860,334" fill="#64748B" />
+
+  <!-- Column 3: Outputs & Remediations -->
+  <g transform="translate(870, 160)">
+    <rect width="270" height="340" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
+    <path d="M 0 14 Q 0 0 14 0 L 256 0 Q 270 0 270 14 L 270 40 L 0 40 Z" fill="#F1F5F9" />
+    <text x="16" y="26" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="750" fill="#1E293B">3. ACTIONABLE REMEDIATION</text>
+
+    <!-- Out 1 -->
+    <g transform="translate(16, 54)">
+      <rect width="238" height="54" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="22" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Defensive Guardrail Prompts</text>
+      <text x="12" y="40" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#64748B">Strict system constraint wrappers</text>
+    </g>
+
+    <!-- Out 2 -->
+    <g transform="translate(16, 116)">
+      <rect width="238" height="54" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="22" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Input Regex Gatekeepers</text>
+      <text x="12" y="40" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#64748B">TypeScript / Python validators</text>
+    </g>
+
+    <!-- Out 3 -->
+    <g transform="translate(16, 178)">
+      <rect width="238" height="54" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="22" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0F172A">CI/CD GitHub Action Gate</text>
+      <text x="12" y="40" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#64748B">Automated PR check &amp; block</text>
+    </g>
+
+    <!-- Out 4 -->
+    <g transform="translate(16, 240)">
+      <rect width="238" height="84" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+      <text x="12" y="22" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8">Compliance Audit Certificates</text>
+      <text x="12" y="40" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#1E40AF">Instant export in Markdown &amp; JSON</text>
+      <text x="12" y="58" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#1E40AF">CVSS Quantitative Risk Summary</text>
+    </g>
+  </g>
+</svg>

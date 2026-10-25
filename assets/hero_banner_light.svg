@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="badgeBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Filters & Shadows -->
+    <filter id="softShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.06" />
+      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.04" />
+    </filter>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.05" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="520" fill="url(#bgGrad)" />
+
+  <!-- Subtle Blueprint Tech Grid -->
+  <g stroke="#E2E8F0" stroke-width="1" opacity="0.65">
+    <line x1="100" y1="0" x2="100" y2="520" />
+    <line x1="300" y1="0" x2="300" y2="520" />
+    <line x1="500" y1="0" x2="500" y2="520" />
+    <line x1="700" y1="0" x2="700" y2="520" />
+    <line x1="900" y1="0" x2="900" y2="520" />
+    <line x1="1100" y1="0" x2="1100" y2="520" />
+    <line x1="0" y1="130" x2="1200" y2="130" />
+    <line x1="0" y1="260" x2="1200" y2="260" />
+    <line x1="0" y1="390" x2="1200" y2="390" />
+  </g>
+
+  <!-- Main Container Card -->
+  <rect x="40" y="30" width="1120" height="460" rx="24" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#softShadow)" />
+
+  <!-- Top Decorative Accent Bar -->
+  <path d="M 64 30 L 1136 30" stroke="url(#cyanGrad)" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Header Category Badge -->
+  <g transform="translate(64, 60)">
+    <rect width="470" height="32" rx="16" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1" />
+    <circle cx="16" cy="16" r="6" fill="#10B981" />
+    <text x="32" y="21" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#047857" letter-spacing="0.5">
+      DATHEON AI STARTUP &amp; SAAS LAUNCH LAB • VENTURE REPORT
+    </text>
+  </g>
+
+  <!-- Brand Title -->
+  <text x="64" y="145" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="850" fill="#0F172A" letter-spacing="-1.2">
+    AgentShield <tspan fill="url(#cyanGrad)">AI</tspan>
+  </text>
+
+  <!-- Value Proposition Tagline -->
+  <text x="64" y="185" font-family="'Inter', -apple-system, sans-serif" font-size="20" font-weight="600" fill="#334155">
+    Continuous Adversarial Security Testing &amp; Vulnerability Auditing for AI Agents
+  </text>
+  <text x="64" y="215" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="400" fill="#64748B">
+    Automated OWASP LLM Top 10 fuzzing in under 60 seconds with copy-paste guardrails and zero runtime proxy latency.
+  </text>
+
+  <!-- 4 Feature Cards Grid -->
+  <g transform="translate(64, 250)">
+    <!-- Card 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="100" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" filter="url(#cardShadow)" />
+      <rect x="14" y="14" width="34" height="34" rx="8" fill="#EFF6FF" />
+      <text x="23" y="37" font-family="'Inter', -apple-system, sans-serif" font-size="16">🎯</text>
+      <text x="58" y="32" font-family="'Inter', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#0F172A">OWASP LLM v2.0</text>
+      <text x="58" y="48" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="600" fill="#0284C7">Full Top 10 Suite</text>
+      <text x="14" y="78" font-family="'Inter', -apple-system, sans-serif" font-size="12" fill="#64748B">Audits prompt injection &amp; exfiltration</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(270, 0)">
+      <rect width="250" height="100" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" filter="url(#cardShadow)" />
+      <rect x="14" y="14" width="34" height="34" rx="8" fill="#ECFDF5" />
+      <text x="23" y="37" font-family="'Inter', -apple-system, sans-serif" font-size="16">⚡</text>
+      <text x="58" y="32" font-family="'Inter', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#0F172A">&lt; 15 ms Latency</text>
+      <text x="58" y="48" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="600" fill="#059669">Zero Runtime Proxy Lag</text>
+      <text x="14" y="78" font-family="'Inter', -apple-system, sans-serif" font-size="12" fill="#64748B">Audits during CI/CD &amp; build-time</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(540, 0)">
+      <rect width="250" height="100" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" filter="url(#cardShadow)" />
+      <rect x="14" y="14" width="34" height="34" rx="8" fill="#FEF3C7" />
+      <text x="23" y="37" font-family="'Inter', -apple-system, sans-serif" font-size="16">🔒</text>
+      <text x="58" y="32" font-family="'Inter', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Non-Custodial</text>
+      <text x="58" y="48" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="600" fill="#D97706">Zero DB Ingestion</text>
+      <text x="14" y="78" font-family="'Inter', -apple-system, sans-serif" font-size="12" fill="#64748B">Your customer data never touches us</text>
+    </g>
+
+    <!-- Card 4 -->
+    <g transform="translate(810, 0)">
+      <rect width="250" height="100" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" filter="url(#cardShadow)" />
+      <rect x="14" y="14" width="34" height="34" rx="8" fill="#F5F3FF" />
+      <text x="23" y="37" font-family="'Inter', -apple-system, sans-serif" font-size="16">🛠️</text>
+      <text x="58" y="32" font-family="'Inter', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Copy-Paste Fixes</text>
+      <text x="58" y="48" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="600" fill="#7C3AED">Actionable Patches</text>
+      <text x="14" y="78" font-family="'Inter', -apple-system, sans-serif" font-size="12" fill="#64748B">Instant guardrails &amp; regex filters</text>
+    </g>
+  </g>
+
+  <!-- Bottom Proof Metrics Bar -->
+  <g transform="translate(64, 385)">
+    <rect width="1060" height="60" rx="12" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1" />
+
+    <!-- Metric 1 -->
+    <g transform="translate(30, 18)">
+      <text x="0" y="16" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="750" fill="#0F172A">22 / 22</text>
+      <text x="65" y="16" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#64748B">Tests Passing (100%)</text>
+    </g>
+
+    <line x1="280" y1="12" x2="280" y2="48" stroke="#CBD5E1" stroke-width="1" />
+
+    <!-- Metric 2 -->
+    <g transform="translate(310, 18)">
+      <text x="0" y="16" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="750" fill="#0284C7">30 Atomic</text>
+      <text x="85" y="16" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#64748B">Git Commits Pushed</text>
+    </g>
+
+    <line x1="550" y1="12" x2="550" y2="48" stroke="#CBD5E1" stroke-width="1" />
+
+    <!-- Metric 3 -->
+    <g transform="translate(580, 18)">
+      <text x="0" y="16" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="750" fill="#059669">Stripe Test</text>
+      <text x="90" y="16" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#64748B">HMAC Webhooks Active</text>
+    </g>
+
+    <line x1="820" y1="12" x2="820" y2="48" stroke="#CBD5E1" stroke-width="1" />
+
+    <!-- Metric 4 -->
+    <g transform="translate(850, 18)">
+      <text x="0" y="16" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="750" fill="#7C3AED">19.5 : 1</text>
+      <text x="65" y="16" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#64748B">LTV / CAC Ratio</text>
+    </g>
+  </g>
+</svg>
