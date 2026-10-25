@@ -518,6 +518,29 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section class="demo-section" style="padding-top: 0;">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-desc">Everything you need to know about AgentShield AI's security architecture.</p>
+
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+        <div class="glass-card" style="padding: var(--spacing-lg);">
+          <h4 style="color: var(--accent-cyan); margin-bottom: var(--spacing-xs);">Q: Does AgentShield store my system prompts or customer data?</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">No. AgentShield operates on a strictly non-custodial model. Prompts submitted for audits are evaluated in-memory during the fuzzing session and immediately discarded unless you explicitly save a test suite to your private database.</p>
+        </div>
+        <div class="glass-card" style="padding: var(--spacing-lg);">
+          <h4 style="color: var(--accent-cyan); margin-bottom: var(--spacing-xs);">Q: How does this differ from an inline AI firewall proxy?</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Inline proxies sit between your user and the LLM, adding 150ms–300ms of latency to every query and acting as a single point of failure. AgentShield runs during your development cycle, CI/CD pipeline, or pull requests to test and harden your prompts before deployment, introducing zero runtime latency.</p>
+        </div>
+        <div class="glass-card" style="padding: var(--spacing-lg);">
+          <h4 style="color: var(--accent-cyan); margin-bottom: var(--spacing-xs);">Q: Can prompt injection be 100% prevented?</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">No security system can promise 100% immunity against all future unknown jailbreaks. AgentShield enforces deterministic regression testing against the known OWASP LLM Top 10 attack corpus and provides defense-in-depth guardrails to prevent common and high-risk exploits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Privacy Banner -->
   <div class="privacy-banner" id="privacy-banner">
     <div><strong>Privacy Standard:</strong> AgentShield AI uses zero-cookie session state and non-custodial scanning. We never store or monetize your prompts.</div>
