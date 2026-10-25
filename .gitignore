@@ -3,6 +3,7 @@ node_modules/
 
 # Build outputs
 dist/
+dist-pages/
 build/
 
 # Environment variables & secrets

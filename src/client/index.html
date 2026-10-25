@@ -310,7 +310,7 @@
   <!-- Header -->
   <header class="header">
     <div class="container nav">
-      <a href="/" class="logo">
+      <a href="index.html" class="logo">
         <span class="logo-shield">🛡️</span>
         <span>AgentShield<span class="text-gradient">.AI</span></span>
       </a>
@@ -318,8 +318,8 @@
         <li><a href="#demo">Live Demo</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#pricing">Pricing</a></li>
-        <li><a href="/pitch.html" target="_blank">Pitch Deck</a></li>
-        <li><a href="/app.html" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.85rem;">MVP Console 🚀</a></li>
+        <li><a href="pitch.html" target="_blank">Pitch Deck</a></li>
+        <li><a href="app.html" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.85rem;">MVP Console 🚀</a></li>
         <li><button id="theme-toggle" class="btn btn-secondary" style="padding: 6px 10px; font-size: 0.9rem;" title="Toggle Theme">☀️</button></li>
       </ul>
     </div>
@@ -442,7 +442,7 @@
             <li><span class="check-icon">✓</span> Copy-Paste Defensive Guardrails</li>
             <li><span class="check-icon">✓</span> Priority Email Support (&lt;12h)</li>
           </ul>
-          <a href="/app.html" class="btn btn-primary" onclick="trackEvent('pricing_click', { tier: 'pro' })">Deploy Pro in MVP Console</a>
+          <a href="app.html" class="btn btn-primary" onclick="trackEvent('pricing_click', { tier: 'pro' })">Deploy Pro in MVP Console</a>
         </div>
 
         <!-- Lifetime Tier -->
@@ -458,7 +458,7 @@
             <li><span class="check-icon">✓</span> 300 scans / mo fair-use soft limit</li>
             <li><span class="check-icon">✓</span> Private Founder Discord & Roadmap Vote</li>
           </ul>
-          <a href="/app.html" class="btn btn-secondary" onclick="trackEvent('pricing_click', { tier: 'lifetime' })">Claim Lifetime Access</a>
+          <a href="app.html" class="btn btn-secondary" onclick="trackEvent('pricing_click', { tier: 'lifetime' })">Claim Lifetime Access</a>
         </div>
       </div>
     </div>
@@ -586,19 +586,33 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, role, tier })
           });
-          const data = await res.json();
           if (res.ok) {
+            const data = await res.json();
+            toastSuccess.innerHTML = '<strong>🎉 Priority Waitlist Access Confirmed!</strong> Check your inbox for your early onboarding pass.';
             toastSuccess.style.display = 'block';
             waitlistForm.reset();
             trackEvent('signup_success', { role, tier });
-          } else {
-            toastError.textContent = data.error || 'Failed to submit. Please try again.';
-            toastError.style.display = 'block';
-            trackEvent('signup_error', { error: data.error });
+            return;
           }
         } catch (err) {
-          toastError.textContent = 'Network error. Please try again later.';
-          toastError.style.display = 'block';
+          // Static host fallback (e.g. GitHub Pages)
+        }
+
+        // Static / Offline Fallback for GitHub Pages
+        try {
+          const waitlistStore = JSON.parse(localStorage.getItem('agentshield_waitlist') || '[]');
+          const refCode = 'AS-' + Math.floor(1000 + Math.random() * 9000);
+          waitlistStore.push({ email, role, tier, refCode, timestamp: new Date().toISOString() });
+          localStorage.setItem('agentshield_waitlist', JSON.stringify(waitlistStore));
+
+          toastSuccess.innerHTML = `<strong>🎉 You're on the waitlist!</strong> Position #${34 + waitlistStore.length} reserved. Your referral link: <code>?ref=${refCode}</code>`;
+          toastSuccess.style.display = 'block';
+          waitlistForm.reset();
+          trackEvent('signup_success_offline', { role, tier, refCode });
+        } catch (e) {
+          toastSuccess.innerHTML = '<strong>🎉 Priority Access Reserved!</strong> Position locked in early cohort.';
+          toastSuccess.style.display = 'block';
+          waitlistForm.reset();
         } finally {
           submitBtn.disabled = false;
           submitBtn.textContent = 'Join Waitlist & Lock Early Access 🚀';

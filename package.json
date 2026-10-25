@@ -7,7 +7,8 @@
     "build": "node ./node_modules/typescript/bin/tsc",
     "start": "node dist/server/server.js",
     "dev": "node ./node_modules/typescript/bin/tsc && node dist/server/server.js",
-    "test": "node ./node_modules/typescript/bin/tsc && node dist/tests/runAllTests.js"
+    "test": "node ./node_modules/typescript/bin/tsc && node dist/tests/runAllTests.js",
+    "build:pages": "node scripts/build-pages.js"
   },
   "keywords": [
     "ai-security",
