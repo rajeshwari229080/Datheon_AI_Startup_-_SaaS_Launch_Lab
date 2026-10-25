@@ -4,10 +4,10 @@
   "description": "Continuous Adversarial Security Testing & Vulnerability Auditing for LLM Applications and AI Agents",
   "main": "dist/server/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "node ./node_modules/typescript/bin/tsc",
     "start": "node dist/server/server.js",
-    "dev": "tsx src/server/server.ts",
-    "test": "tsx src/tests/runAllTests.ts"
+    "dev": "node ./node_modules/typescript/bin/tsc && node dist/server/server.js",
+    "test": "node ./node_modules/typescript/bin/tsc && node dist/tests/runAllTests.js"
   },
   "keywords": [
     "ai-security",
